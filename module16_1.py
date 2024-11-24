@@ -14,7 +14,7 @@ async def admin_page() -> dict:
 
 
 @app.get("/user/{user_id}")  # http://127.0.0.1:8000/user/25
-async def user_page1(user_id: str) -> dict:
+async def user_page1(user_id: int) -> dict:
     return {"message": f"V1. Вы вошли как пользователь {user_id}"}
 
 
@@ -34,5 +34,5 @@ async def user_page3(username: str, age: int) -> dict:
 
 
 @app.get("/user")  # http://127.0.0.1:8000/user?user_id=25
-async def user_page4(user_id: str) -> dict:
+async def user_page4(user_id: int) -> dict:
     return {"message": f"V2. Вы вошли как пользователь {user_id}"}
